@@ -3,7 +3,7 @@ require_once __DIR__ . '/includes/auth.php';
 require_once __DIR__ . '/includes/helpers.php';
 
 if (currentUser()) {
-    redirect('/index.php');
+    redirect('/modules/projects/index.php');
 }
 
 $error = null;
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error = 'บัญชีของท่านอยู่ระหว่างรอการอนุมัติจากผู้ดูแลระบบ';
         } else {
             $_SESSION['user'] = $result;
-            redirect('/index.php');
+            redirect('/modules/projects/index.php');
         }
     }
 }

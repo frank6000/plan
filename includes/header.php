@@ -19,7 +19,7 @@ $pageTitle = $pageTitle ?? 'ระบบติดตามโครงการ'
 <?php if ($user): ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/index.php">ระบบติดตามโครงการ กิจกรรม งบประมาณ และ KPI</a>
+    <a class="navbar-brand" href="/modules/projects/index.php">ระบบติดตามโครงการ กิจกรรม งบประมาณ และ KPI</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav1">
       <span class="navbar-toggler-icon"></span>
     </button>
