@@ -198,7 +198,7 @@ $user = currentUser();
       <div class="col-lg-6">
         <div class="card portfolio-card p-4 p-lg-5 h-100 d-flex flex-column justify-content-center text-center">
           <i class="bi bi-kanban" style="font-size:4rem;color:var(--primary)"></i>
-          <p class="text-muted mt-3 mb-0">เทคโนโลยีที่ใช้: PHP 8, MySQL, Bootstrap 5<br>ออกแบบสถาปัตยกรรมและฐานข้อมูลตามความต้องการเฉพาะขององค์กร</p>
+          <p class="text-muted mt-3 mb-0">เทคโนโลยีที่ใช้: PHP 8, MySQL, Bootstrap 5, Node.js, JavaScript<br>ออกแบบสถาปัตยกรรมและฐานข้อมูลตามความต้องการเฉพาะขององค์กร</p>
         </div>
       </div>
     </div>
