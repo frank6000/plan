@@ -1,0 +1,11 @@
+body {
+  font-family: 'Prompt', sans-serif;
+  background: #F8F9FC;
+}
+.card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,.06);
+}
+.navbar-brand { font-weight: 600; }
+.status-badge { font-size: .8rem; }
