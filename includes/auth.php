@@ -3,6 +3,25 @@ require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/helpers.php';
 
 if (session_status() === PHP_SESSION_NONE) {
+    // บาง hosting (เช่น cPanel/CloudLinux) บล็อกการเขียน session ไปที่ system default path
+    // ด้วย open_basedir จึงต้องกำหนด path ของเราเองในโฟลเดอร์ที่เขียนได้แน่นอน
+    $sessionPath = __DIR__ . '/../storage/sessions';
+    if (!is_dir($sessionPath)) {
+        @mkdir($sessionPath, 0700, true);
+    }
+    if (is_dir($sessionPath) && is_writable($sessionPath)) {
+        session_save_path($sessionPath);
+    }
+
+    session_set_cookie_params([
+        'lifetime' => 0,
+        'path' => '/',
+        'domain' => '',
+        'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off',
+        'httponly' => true,
+        'samesite' => 'Lax',
+    ]);
+
     session_start();
 }
 
